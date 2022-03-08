@@ -1,0 +1,44 @@
+PROCEDURE dot_product(v1,v2:ARRAY_OF;ps:INTEGER)
+VAR
+    i:INTEGER;
+BEGIN
+    ps:=0;  
+    FOR i FROM 0 TO v1.lenght-1 STEP 1  DO
+        ps:=ps+v1[i]*v2[i];
+    END_FOR
+END
+
+PROCEDURE orthogonaliter(v1,v2;sortie:INTEGER)
+VAR
+BEGIN
+    sortie:=dot_product(v1,v2; ps);
+    IF (sortie=0) THEN
+        Write(v1,"et",v2,"sont orthogonaux");
+    ELSE
+        Write(v1,"et",v2,"sont colinéaire");
+    END_IF
+
+END
+
+ALGORITHM De_Calcul_De_Produit_Scalaire_Procedure
+VAR
+    v1 : ARRAY_OF INTEGER[10];
+    v2 : ARRAY_OF INTEGER[10];
+    i,nb:INTEGER;
+BEGIN
+    i:=0;
+    Write("Entrez les élements du vecteur vecteur V1");
+    REPEAT
+        Read(nb);
+        v1[i]:=nb;
+        i=i+1;
+    UNTIL (i<10);
+    Write("Entrez les élements du vecteur V2");
+    REPEAT
+        Read(nb);
+        v2[i]:=nb;
+        i=i+1;
+    UNTIL (i<10);
+    orthogonaliter(v1,v2:sortie);
+    
+END
