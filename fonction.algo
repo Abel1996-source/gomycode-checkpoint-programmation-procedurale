@@ -1,4 +1,4 @@
-FUNCTION dot_product(v1,v2) : INTEGER
+FUNCTION dot_product(v1,v2:ARRAY_OF INTEGER) : INTEGER
 VAR
     ps,i:INTEGER;
 BEGIN
@@ -9,7 +9,7 @@ BEGIN
     RETURN ps ;
 END
 
-FUNCTION orthogonaliter(v1,v2): INTEGER
+FUNCTION orthogonaliter(v1,v2 : ARRAY_OF INTEGER): INTEGER
 VAR
     sortie:INTEGER;
 BEGIN

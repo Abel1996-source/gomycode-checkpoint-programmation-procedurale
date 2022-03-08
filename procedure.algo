@@ -1,4 +1,4 @@
-PROCEDURE dot_product(v1,v2:ARRAY_OF;ps:INTEGER)
+PROCEDURE dot_product(v1,v2:ARRAY_OF INTEGER ; ps:INTEGER)
 VAR
     i:INTEGER;
 BEGIN
@@ -8,7 +8,7 @@ BEGIN
     END_FOR
 END
 
-PROCEDURE orthogonaliter(v1,v2;sortie:INTEGER)
+PROCEDURE orthogonaliter(v1,v2:ARRAY_OF INTEGER ; sortie:INTEGER)
 VAR
 BEGIN
     sortie:=dot_product(v1,v2; ps);
