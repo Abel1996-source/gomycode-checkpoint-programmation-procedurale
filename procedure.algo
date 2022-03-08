@@ -27,14 +27,16 @@ VAR
     i,nb:INTEGER;
 BEGIN
     i:=0;
-    Write("Entrez les élements du vecteur vecteur V1");
+    
     REPEAT
+        Write("Entrez les élements du vecteur vecteur V1");
         Read(nb);
         v1[i]:=nb;
         i=i+1;
     UNTIL (i<10);
-    Write("Entrez les élements du vecteur V2");
+    
     REPEAT
+        Write("Entrez les élements du vecteur V2");
         Read(nb);
         v2[i]:=nb;
         i=i+1;
